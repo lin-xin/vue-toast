@@ -1,6 +1,6 @@
 {
   "name": "vue2-toast",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A mobile toast plugin for vue2.",
   "main": "lib/index.js",
   "directories": {

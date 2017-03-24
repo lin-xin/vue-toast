@@ -46,3 +46,9 @@ export default {
 
 - defaultType : position of Toast. | default: 'bottom' | possible 'top, center,bottom'
 - duration : default 2500ms
+
+## source code
+download in [Github](https://github.com/lin-xin/vue-toast).
+
+## demo
+![image](https://raw.githubusercontent.com/lin-xin/vue-toast/master/screenshots/1.gif)
