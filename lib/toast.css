@@ -1,0 +1,39 @@
+.vue-toast{
+    position: fixed;
+    bottom:100px;
+    left:50%;
+    width:200px;
+    height:40px;
+    line-height: 40px;
+    margin-left: -100px;
+    text-align: center;
+    z-index:9999;
+    font-size:14px;
+    color: #fff;
+    border-radius: 5px;
+    background: rgba(0,0,0,0.7);
+    animation: show-toast .5s;
+    -webkit-animation: show-toast .5s;
+}
+.vue-toast.toast-top{
+    top:50px;
+    bottom:inherit;
+}
+.vue-toast.toast-center{
+    top:50%;
+    margin-top: -20px;
+    bottom:inherit;
+}
+@keyframes show-toast
+{
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+        -webkit-transform: translateY(-10px);
+}
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+    }
+}

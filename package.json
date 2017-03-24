@@ -1,0 +1,14 @@
+{
+  "name": "vue2-toast",
+  "version": "1.0.1",
+  "description": "A mobile toast plugin for vue2.",
+  "main": "lib/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "linxin",
+  "license": "ISC"
+}
