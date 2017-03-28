@@ -2,9 +2,10 @@
     position: fixed;
     bottom:100px;
     left:50%;
-    width:200px;
+    width:180px;
     height:40px;
     line-height: 40px;
+    padding:0 10px;
     margin-left: -100px;
     text-align: center;
     z-index:9999;
@@ -14,6 +15,9 @@
     background: rgba(0,0,0,0.7);
     animation: show-toast .5s;
     -webkit-animation: show-toast .5s;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
 }
 .vue-toast.toast-top{
     top:50px;
