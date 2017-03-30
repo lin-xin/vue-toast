@@ -23,6 +23,7 @@ Use in component:
         <button @click="openTop()">top</button>
         <button @click="openCenter()">center</button>
         <button @click="openBottom()">bottom</button>
+		<button @click="openLoading()">loading</button>
     </div>
 </template>
 export default {
@@ -35,6 +36,16 @@ export default {
         },
         openBottom(){
             this.$toast('bottom');  // or this.$toast.bottom('bottom'); 
+        },
+        openLoading(){
+            this.$loading('loading...');
+			let self = this;
+	        setTimeout(function () {
+	          self.closeLoading()
+	        }, 2000)
+        },
+        closeLoading(){
+            this.$loading.close();
         }
     }
 }
