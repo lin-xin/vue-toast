@@ -1,15 +1,15 @@
-# vue-toast
+# vue2-toast
 A mobile toast plugin for vue2.
 
 ## Usage
 Install:
 
 ```
-npm install vue-toast -S
+npm install vue2-toast -S
 ```
 Import:
 
-```
+```javascript
 import 'vue2-toast/lib/vue-toast.css';
 import Toast from 'vue2-toast';
 Vue.use(Toast);
@@ -17,7 +17,7 @@ Vue.use(Toast);
 
 Use in component:
 
-```
+```javascript
 <template>
     <div id="app">
         <button @click="openTop()">top</button>
