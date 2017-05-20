@@ -10,7 +10,7 @@ npm install vue2-toast -S
 Import:
 
 ```javascript
-import 'vue2-toast/lib/vue-toast.css';
+import 'vue2-toast/lib/toast.css';
 import Toast from 'vue2-toast';
 Vue.use(Toast);
 ```
