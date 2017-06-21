@@ -1,6 +1,12 @@
 # vue2-toast
 A mobile toast plugin for vue2.
 
+<p>
+  <a href="https://www.npmjs.com/package/vue2-toast"><img src="https://img.shields.io/npm/dm/vue2-toast.svg" alt="Downloads"></a>
+  <a href="https://www.npmjs.com/package/vue2-toast"><img src="https://img.shields.io/npm/v/vue2-toast.svg" alt="Version"></a>
+  <br>
+</p>
+
 ## Usage
 Install:
 
@@ -10,7 +16,7 @@ npm install vue2-toast -S
 Import:
 
 ```javascript
-import 'vue2-toast/lib/vue-toast.css';
+import 'vue2-toast/lib/toast.css';
 import Toast from 'vue2-toast';
 Vue.use(Toast);
 ```
