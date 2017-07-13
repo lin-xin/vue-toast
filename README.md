@@ -1,5 +1,5 @@
 # vue2-toast
-A mobile toast plugin for vue2.
+A mobile toast plugin for vue2.(can't work in Nuxt.js/SSR)
 
 <p>
   <a href="https://www.npmjs.com/package/vue2-toast"><img src="https://img.shields.io/npm/dm/vue2-toast.svg" alt="Downloads"></a>
