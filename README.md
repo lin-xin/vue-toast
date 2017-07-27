@@ -56,6 +56,19 @@ export default {
     }
 }
 ```
+## work in Nuxt.js
+config it in nuxt.config.js
+
+```
+build: {
+	vendor: ['vue2-toast'],
+	extend (config, ctx) {
+	  if (ctx.isClient) {
+	    config.resolve.alias['vue'] = 'vue/dist/vue.js';
+	  }
+	}
+}
+```
 
 ## options
 
