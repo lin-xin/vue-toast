@@ -1,5 +1,5 @@
 # vue2-toast
-A mobile toast plugin for vue2.(can't work in Nuxt.js/SSR)
+A mobile toast plugin for vue2.
 
 <p>
   <a href="https://www.npmjs.com/package/vue2-toast"><img src="https://img.shields.io/npm/dm/vue2-toast.svg" alt="Downloads"></a>
@@ -19,6 +19,17 @@ Import:
 import 'vue2-toast/lib/toast.css';
 import Toast from 'vue2-toast';
 Vue.use(Toast);
+```
+or
+```javascript
+import 'vue2-toast/lib/toast.css';
+import Toast from 'vue2-toast';
+Vue.use(Toast, {
+    defaultType: 'center',
+    duration: 3000,
+    wordWrap: true,
+    width: '150px'
+});
 ```
 
 Use in component:
@@ -74,8 +85,10 @@ build: {
 
     Vue.use(Toast, [options])
 
-- defaultType : position of Toast. | default: 'bottom' | possible 'top, center,bottom'
-- duration : default 2500ms
+- defaultType : position of Toast. | String | default: 'bottom' | possible 'top, center,bottom'
+- duration : Number | default 2500ms
+- wordWrap : word wrap. | Boolean | default: false
+- width : width of Toast. | String | default: 'auto'
 
 ## source code
 download in [Github](https://github.com/lin-xin/vue-toast).
