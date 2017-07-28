@@ -1,5 +1,5 @@
 # vue2-toast
-A mobile toast plugin for vue2. [中文文档](https://github.com/lin-xin/vue-toast/blob/master/README_zh.md)
+基于vue2的移动端 toast 插件。 [English document](https://github.com/lin-xin/vue-toast/blob/master/README.md)
 
 <p>
   <a href="https://www.npmjs.com/package/vue2-toast"><img src="https://img.shields.io/npm/dm/vue2-toast.svg" alt="Downloads"></a>
@@ -7,20 +7,21 @@ A mobile toast plugin for vue2. [中文文档](https://github.com/lin-xin/vue-to
   <br>
 </p>
 
-## Usage
-Install:
+## 使用
+安装:
 
 ```
 npm install vue2-toast -S
 ```
-Import:
+引入:
 
 ```javascript
 import 'vue2-toast/lib/toast.css';
 import Toast from 'vue2-toast';
 Vue.use(Toast);
 ```
-or
+或者使用配置
+
 ```javascript
 import 'vue2-toast/lib/toast.css';
 import Toast from 'vue2-toast';
@@ -32,7 +33,7 @@ Vue.use(Toast, {
 });
 ```
 
-Use in component:
+在组件中使用:
 
 ```javascript
 <template>
@@ -67,8 +68,8 @@ export default {
     }
 }
 ```
-## work in Nuxt.js
-config it in nuxt.config.js
+## 在 Nuxt.js 中使用
+除了 nuxt.js 使用 vue 插件的配置之外，还需要再 nuxt.config.js 添加以下配置
 
 ```
 build: {
@@ -81,16 +82,16 @@ build: {
 }
 ```
 
-## options
+## 配置
 
     Vue.use(Toast, [options])
 
-- defaultType : position of Toast. | String | default: 'bottom' | possible 'top, center,bottom'
-- duration : Number | default 2500ms
-- wordWrap : word wrap. | Boolean | default: false
-- width : width of Toast. | String | default: 'auto'
+- defaultType : Toast 的位置. | String | 默认: 'bottom' | 可选值 'top, center,bottom'
+- duration : Number | 默认 2500ms
+- wordWrap : 是否自动换行. | Boolean | 默认: false
+- width : Toast 的宽度. | String | 默认: 'auto'
 
-## source code
+## 源码
 download in [Github](https://github.com/lin-xin/vue-toast).
 
 ## demo
