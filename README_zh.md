@@ -7,6 +7,8 @@
   <br>
 </p>
 
+[互动演示](http://blog.gdfengshuo.com/example/vue2-toast/)
+
 ## 使用
 安装:
 
@@ -71,7 +73,7 @@ export default {
 ## 在 Nuxt.js 中使用
 除了 nuxt.js 使用 vue 插件的配置之外，还需要再 nuxt.config.js 添加以下配置
 
-```
+```js
 build: {
 	vendor: ['vue2-toast'],
 	extend (config, ctx) {
@@ -91,8 +93,6 @@ build: {
 - wordWrap : 是否自动换行. | Boolean | 默认: false
 - width : Toast 的宽度. | String | 默认: 'auto'
 
-## 源码
-download in [Github](https://github.com/lin-xin/vue-toast).
 
 ## demo
 ![image](https://raw.githubusercontent.com/lin-xin/vue-toast/master/screenshots/1.gif)
