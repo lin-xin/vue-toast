@@ -7,7 +7,7 @@
   <br>
 </p>
 
-[互动演示](http://blog.gdfengshuo.com/example/vue2-toast/)
+[互动演示](http://blog.gdfengshuo.com/example/#/vue2-toast)
 
 ## 使用
 安装:

@@ -7,7 +7,7 @@ A mobile toast plugin for vue2. [中文文档](https://github.com/lin-xin/vue-to
   <br>
 </p>
 
-[Interactive Demo](http://blog.gdfengshuo.com/example/vue2-toast/)
+[Interactive Demo](http://blog.gdfengshuo.com/example/#/vue2-toast)
 
 ## Usage
 Install:
