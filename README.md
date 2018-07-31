@@ -27,7 +27,7 @@ or
 import 'vue2-toast/lib/toast.css';
 import Toast from 'vue2-toast';
 Vue.use(Toast, {
-    defaultType: 'center',
+    type: 'center',
     duration: 3000,
     wordWrap: true,
     width: '150px'
@@ -87,7 +87,7 @@ build: {
 
     Vue.use(Toast, [options])
 
-- defaultType : position of Toast. | String | default: 'bottom' | possible 'top, center,bottom'
+- type : position of Toast. | String | default: 'bottom' | possible 'top, center,bottom'
 - duration : Number | default 2500ms
 - wordWrap : word wrap. | Boolean | default: false
 - width : width of Toast. | String | default: 'auto'

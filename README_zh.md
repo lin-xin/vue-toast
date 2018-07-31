@@ -28,7 +28,7 @@ Vue.use(Toast);
 import 'vue2-toast/lib/toast.css';
 import Toast from 'vue2-toast';
 Vue.use(Toast, {
-    defaultType: 'center',
+    type: 'center',
     duration: 3000,
     wordWrap: true,
     width: '150px'
@@ -88,7 +88,7 @@ build: {
 
     Vue.use(Toast, [options])
 
-- defaultType : Toast 的位置. | String | 默认: 'bottom' | 可选值 'top, center,bottom'
+- type : Toast 的位置. | String | 默认: 'bottom' | 可选值 'top, center,bottom'
 - duration : Number | 默认 2500ms
 - wordWrap : 是否自动换行. | Boolean | 默认: false
 - width : Toast 的宽度. | String | 默认: 'auto'
