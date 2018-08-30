@@ -10,7 +10,7 @@ const defaultOption = {
     width: 'auto'
 };
 
-Toast.install = (Vue, options = defaultOption) => {
+Toast.install = (Vue, options) => {
     /**
      * toast方法
      * @param {string} tip 提示文本
@@ -18,7 +18,7 @@ Toast.install = (Vue, options = defaultOption) => {
      */
     Vue.prototype.$toast = (tip, config) => {
         let option = {};
-        Object.assign(option, options);
+        Object.assign(option, defaultOption, options);
 
         if(typeof config === 'object'){
             Object.assign(option, config);
@@ -45,11 +45,11 @@ Toast.install = (Vue, options = defaultOption) => {
                         },
                     }
                 },
-                render: createElement => {
+                render(h){
                     if(!this.show){
                         return false;
                     }
-                    return createElement(
+                    return h(
                         'div',
                         {
                             class: ['lx-toast', `lx-toast-${this.type}`, this.wordWrap?'lx-word-wrap':''],
@@ -79,21 +79,25 @@ Toast.install = (Vue, options = defaultOption) => {
     };
 
     ['bottom', 'center', 'top'].forEach(type => {
-        Vue.prototype.$toast[type] = (tip, config = {}) => {
-            config.type = type;
+        Vue.prototype.$toast[type] = (tip, config = {type}) => {
             return Vue.prototype.$toast(tip, config);
         }
     });
 
+    /**
+     * loading方法
+     * @param {*string} tip 提示文本
+     * @param {*string} type loading类型，可选open/close
+     */
     Vue.prototype.$loading = (tip, type) => {
         if(type === 'close'){
             if(loadNode){
                 loadNode.show = showLoad = false;
-            }else{
-                if(showLoad && loadNode){
-                    showLoad.tip = tip;
-                    return false;
-                }
+            }
+        }else{
+            if(showLoad && loadNode){
+                showLoad.tip = tip;
+                return false;
             }
             const loadTpl = Vue.extend({
                 data(){
@@ -101,9 +105,47 @@ Toast.install = (Vue, options = defaultOption) => {
                         show: false,
                         tip
                     }
+                },
+                render(h){
+                    if(!this.show){
+                        return ;
+                    }
+                    return h('div', {
+                        class: 'lx-load-mark',
+                        show: this.show
+                    },[
+                        h('div', {
+                            class: 'lx-load-box'
+                        }, [
+                            h('div', {
+                                class: 'lx-loading'
+                            }, Array.apply(null, {length: 12}).map((value, index) => {
+                                return h('div', {
+                                    class: ['loading_leaf',`loading_leaf_${index}`]
+                                })
+                            })),
+                            h('div', {
+                                class: 'lx-load-content',
+                                domProps: {
+                                    innerHTML: this.tip
+                                }
+                            })
+                        ])
+                    ])
                 }
-            })
-        }
-    }
-}
+            });
+            loadNode = new loadTpl();
+            const tpl = loadNode.$mount().$el;
 
+            document.body.appendChild(tpl);
+            loadNode.show = showLoad = true;
+        }
+    };
+
+    ['open', 'close'].map(type => {
+        Vue.prototype.$loading[type] = tip => {
+            return Vue.prototype.$loading(tip, type);
+        }
+    })
+}
+export default Toast;
