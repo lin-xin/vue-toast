@@ -142,7 +142,7 @@ Toast.install = (Vue, options) => {
         }
     };
 
-    ['open', 'close'].map(type => {
+    ['open', 'close'].forEach(type => {
         Vue.prototype.$loading[type] = tip => {
             return Vue.prototype.$loading(tip, type);
         }
