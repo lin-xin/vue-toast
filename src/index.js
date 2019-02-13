@@ -118,7 +118,7 @@ Toast.install = (Vue, options) => {
                             class: 'lx-load-box'
                         }, [
                             h('div', {
-                                class: 'lx-loading'
+                                class: this.tip?'lx-loading':'lx-loading-nocontent'
                             }, Array.apply(null, {length: 12}).map((value, index) => {
                                 return h('div', {
                                     class: ['loading_leaf',`loading_leaf_${index}`]
