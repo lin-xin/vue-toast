@@ -86,11 +86,15 @@
     font-size: 14px;
 }
 
-.lx-loading {
+.lx-loading, .lx-loading-nocontent {
     position: absolute;
     width: 0px;
     left: 50%;
     top: 38%;
+}
+
+.lx-loading-nocontent {
+    top: 50%;
 }
 
 .loading_leaf {
