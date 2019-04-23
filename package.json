@@ -2,22 +2,32 @@
   "name": "vue2-toast",
   "version": "2.0.2",
   "description": "A mobile toast plugin for vue2.",
-  "keywords":["vue.js","vue-plugin","toast"],
+  "keywords": [
+    "vue.js",
+    "vue-plugin",
+    "toast"
+  ],
   "main": "lib/index.js",
   "directories": {
     "test": "test"
   },
-  "bugs": {  
-  	"url": "https://github.com/lin-xin/vue-toast/issues",
-  	"email": "2981207131@qq.com"
+  "bugs": {
+    "url": "https://github.com/lin-xin/vue-toast/issues",
+    "email": "2981207131@qq.com"
   },
   "repository": {
-  	"type": "git",
-  	"url": "https://github.com/lin-xin/vue-toast.git"
+    "type": "git",
+    "url": "https://github.com/lin-xin/vue-toast.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "linxin",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^8.0.0"
+  }
 }
